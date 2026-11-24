@@ -1,0 +1,96 @@
+DIABETES PREDICTION USING R - EXECUTION OUTPUT
+================================================
+
+GIVEN PROBLEM STATEMENT
+-----------------------
+Total Patients: 200
+True Positive: 70
+False Negative: 10
+False Positive: 20
+True Negative: 100
+
+Evaluation Metrics:
+Accuracy  : 85%
+Precision : 77.78%
+Recall    : 87.5%
+F1 Score  : 82.35%
+
+Confusion Matrix:
+                 Predicted No   Predicted Yes
+Actual No              100             20
+Actual Yes              10             70
+
+DIABETES PREDICTION MODEL
+-------------------------
+Dataset: Pima Indians Diabetes
+Dataset dimensions: 768 rows x 9 columns
+Training records: 614
+Testing records: 154
+Algorithm: Logistic Regression (GLM with binomial family)
+Task: Supervised binary classification
+
+First six records:
+  Pregnancies Glucose BloodPressure SkinThickness Insulin  BMI DiabetesPedigreeFunction Age Outcome
+1           6     148            72            35       0 33.6                    0.627  50       1
+2           1      85            66            29       0 26.6                    0.351  31       0
+3           8     183            64             0       0 23.3                    0.672  32       1
+4           1      89            66            23      94 28.1                    0.167  21       0
+5           0     137            40            35     168 43.1                    2.288  33       1
+6           5     116            74             0       0 25.6                    0.201  30       0
+
+LOGISTIC REGRESSION MODEL
+-------------------------
+Call:
+glm(formula = Outcome ~ ., family = binomial, data = train_data)
+
+Coefficients:
+                           Estimate Std. Error z value Pr(>|z|)
+(Intercept)              -8.5804093  0.8947976  -9.589  < 2e-16
+Pregnancies               0.1038475  0.0362993   2.861  0.00422
+Glucose                   0.0374491  0.0043188   8.671  < 2e-16
+BloodPressure            -0.0111828  0.0094793  -1.180  0.23812
+SkinThickness             0.0004267  0.0143787   0.030  0.97632
+Insulin                  -0.0009048  0.0012230  -0.740  0.45941
+BMI                       0.0880978  0.0199928   4.406  1.05e-05
+DiabetesPedigreeFunction  0.8570239  0.3358286   2.552  0.01071
+Age                       0.0132167  0.0104854   1.260  0.20749
+
+Null deviance: 793.94 on 613 degrees of freedom
+Residual deviance: 587.25 on 605 degrees of freedom
+AIC: 605.25
+Number of Fisher Scoring iterations: 5
+
+MODEL CONFUSION MATRIX
+----------------------
+                 Predicted No   Predicted Yes
+Actual No               91              9
+Actual Yes              21             33
+
+MODEL PERFORMANCE
+-----------------
+Accuracy  : 80.52%
+Precision : 78.57%
+Recall    : 61.11%
+F1 Score  : 68.75%
+ROC-AUC   : 0.891
+
+ACTUAL VS PREDICTED SAMPLE
+--------------------------
+Actual  Predicted  Probability
+No      No         0.044
+Yes     Yes        0.897
+Yes     No         0.408
+Yes     Yes        0.704
+Yes     Yes        0.723
+No      No         0.034
+No      No         0.147
+No      Yes        0.782
+No      No         0.064
+Yes     Yes        0.847
+Yes     Yes        0.901
+No      No         0.106
+Yes     No         0.185
+No      No         0.445
+Yes     No         0.194
+
+PROJECT STATUS: COMPLETED

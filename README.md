@@ -36,6 +36,38 @@ The model is built in **R using Logistic Regression** through the `glm()` functi
 | Training / testing | 614 / 154 records |
 | Target variable | `Outcome` (0 = No, 1 = Yes) |
 
+## 📌 Original problem statement
+
+**Given Problem Statement**
+
+A total of **200 patients** were evaluated. The confusion-matrix values provided in the problem are:
+
+- **Total Patients:** 200
+- **True Positive (TP):** 70
+- **False Negative (FN):** 10
+- **False Positive (FP):** 20
+- **True Negative (TN):** 100
+
+### Given confusion matrix
+
+| Actual / Predicted | Predicted No | Predicted Yes |
+|---|---:|---:|
+| **Actual No** | 100 | 20 |
+| **Actual Yes** | 10 | 70 |
+
+### Evaluation metrics from the given problem
+
+| Metric | Given value |
+|---|---:|
+| Accuracy | **85%** |
+| Precision | **77.78%** |
+| Recall | **87.5%** |
+| F1-score | **82.35%** |
+
+These are the original example values supplied for the problem statement. They are shown separately from the results produced by training and testing the Logistic Regression model on the dataset.
+
+---
+
 ## 🎯 Objectives
 
 - Explore and understand the diabetes dataset.

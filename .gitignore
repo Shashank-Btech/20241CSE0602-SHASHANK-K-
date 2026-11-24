@@ -1,0 +1,14 @@
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Generated outputs (created by running the R script)
+visualizations/*.png
+visualizations/*.csv
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
